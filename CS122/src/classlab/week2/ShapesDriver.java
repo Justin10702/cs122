@@ -3,11 +3,12 @@ package classlab.week2;
 public class ShapesDriver {
 
 	public static void main(String[] args) {
-		Shape test = new Shape();
-		test.name = "Jim";
-		test.area = 15;
+		Rectangle r1 = new Rectangle("tiny rectangle", 2, 4);
+		square s1 = new square("large square", 200);
 		
-		System.out.println("The shape is a " + test.name + "the area is " + test.area);
+		
+		System.out.println(r1);
+		System.out.println(s1);
 		
 		
 	}

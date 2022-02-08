@@ -12,7 +12,7 @@ public abstract class Person {
 		this.city = city;
 	}
 	
-	
+	// test
 	
 	public int getAge() { 
 		return this.age;

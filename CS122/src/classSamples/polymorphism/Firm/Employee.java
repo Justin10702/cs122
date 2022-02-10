@@ -36,4 +36,7 @@ public class Employee extends StaffMember {
 	public double pay() {
 		return payRate;
 	}
+	public double vacationDays() {
+		return 28;
+	}
 }

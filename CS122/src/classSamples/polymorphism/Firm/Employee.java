@@ -7,7 +7,7 @@ package classSamples.polymorphism.Firm;//***************************************
 public class Employee extends StaffMember {
 	protected String socialSecurityNumber;
 	protected double payRate;
-
+	protected final int VACATION_DAYS = 14;
 	// -----------------------------------------------------------------
 	// Constructor: Sets up this employee with the specified
 	// information.
@@ -37,6 +37,6 @@ public class Employee extends StaffMember {
 		return payRate;
 	}
 	public double vacationDays() {
-		return 28;
+		return VACATION_DAYS;
 	}
 }

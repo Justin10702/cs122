@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 //************************************************************************
 //  FahrenheitPane.java       Author: Lewis/Loftus
@@ -58,9 +59,25 @@ public class FahrenheitPane extends GridPane {
 	// Computes and displays the converted temperature when the user
 	// presses the return key while in the text field.
 	// --------------------------------------------------------------------
+	
+
+	
 	public void processReturn(ActionEvent event) {
-		int fahrenheitTemp = Integer.parseInt(fahrenheit.getText());
-		int celsiusTemp = (fahrenheitTemp - 32) * 5 / 9;
-		result.setText(celsiusTemp + "");
+		
+		
+		try {
+			int fahrenheitTemp = Integer.parseInt(fahrenheit.getText());
+			int celsiusTemp = (fahrenheitTemp - 32) * 5 / 9;
+			result.setText(celsiusTemp + "");
+			
+		}
+		catch (Exception e) {
+			result.setText("ERROR!");
+			setStyle("-fx-background-color: red");
+			
+		}
+		
+		
+		
 	}
 }

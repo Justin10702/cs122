@@ -1,7 +1,9 @@
 package classSamples.gui3.FontDemo;
 
 import javafx.application.Application;
+
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -17,6 +19,8 @@ import javafx.stage.Stage;
 //************************************************************************
 
 public class FontDemo extends Application {
+	
+	Text text1;
 	// --------------------------------------------------------------------
 	// Displays three Text objects using various font styles.
 	// --------------------------------------------------------------------
@@ -24,7 +28,7 @@ public class FontDemo extends Application {
 		Font font1 = new Font("Courier", 36);
 		Font font2 = Font.font("Times", FontWeight.BOLD, FontPosture.ITALIC, 28);
 		Font font3 = Font.font("Arial", FontPosture.ITALIC, 14);
-
+			
 		Text text1 = new Text(30, 55, "Dream Big");
 		text1.setFont(font1);
 		text1.setUnderline(true);
@@ -36,6 +40,11 @@ public class FontDemo extends Application {
 		Text text3 = new Text(50, 150,
 				"In theory, there is no difference " + "between theory\nand practice, but in practice there is.");
 		text3.setFont(font3);
+		
+		Button button = new Button("Push Me!");
+		button.setOnAction((event)-> {
+			text1.setFont(Font.font("American Typewriter", FontWeight.BOLD, 30));
+		});
 
 		Group root = new Group(text1, text2, text3);
 		Scene scene = new Scene(root, 400, 200, Color.LIGHTCYAN);

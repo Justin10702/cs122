@@ -6,6 +6,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 //************************************************************************
@@ -15,7 +16,7 @@ import javafx.stage.Stage;
 //************************************************************************
 
 public class RedOrBlue extends Application {
-	private Button redButton, blueButton;
+	private Button redButton, blueButton, greenButton;
 	private FlowPane pane;
 
 	// --------------------------------------------------------------------
@@ -28,15 +29,18 @@ public class RedOrBlue extends Application {
 
 		blueButton = new Button("Blue!");
 		blueButton.setOnAction(this::processColorButton);
+		
+		greenButton = new Button("Green!");
+		greenButton.setOnAction(this::processColorButton);
 
-		pane = new FlowPane(redButton, blueButton);
+		pane = new FlowPane(redButton, blueButton, greenButton);
 		pane.setAlignment(Pos.CENTER);
 		pane.setHgap(20);
 		pane.setStyle("-fx-background-color: white");
 
 		Scene scene = new Scene(pane, 300, 100);
 
-		primaryStage.setTitle("Red or Blue?");
+		primaryStage.setTitle("Red, blue, or green?");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
@@ -46,10 +50,30 @@ public class RedOrBlue extends Application {
 	// accordingly.
 	// --------------------------------------------------------------------
 	public void processColorButton(ActionEvent event) {
-		if (event.getSource() == redButton)
+		
+		//System.out.println(event.getSource());
+	//	System.out.println(redButton);
+	//	System.out.println(blueButton);
+	//	if(event.getSource() == redButton) {
+	//		redButton.setTextFill(Color.RED);
+		//	blueButton.setTextFill(Color.RED);
+		//	pane.setStyle("-fx-background-color: red");
+	//	}
+		//	else {
+		//		redButton.setTextFill(Color.BLUE);
+		//		blueButton.setTextFill(Color.BLUE);
+			//	pane.setStyle("-fx-background-color: blue");
+			//}
+		//}
+		if (event.getSource() == redButton) {
 			pane.setStyle("-fx-background-color: crimson");
-		else
+		}
+		else if (event.getSource() == blueButton) {
 			pane.setStyle("-fx-background-color: deepskyblue");
+		}else {
+			pane.setStyle("-fx-background-color: green");
+		}
+		
 	}
 
 	public static void main(String[] args) {

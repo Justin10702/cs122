@@ -2,6 +2,7 @@ package assignments.assignment5;
 
 import java.util.LinkedList;
 
+import assignments.assignment5.IntList.IntNode;
 import javafx.scene.Node;
 
 //***********************************************************
@@ -48,9 +49,14 @@ public void enqueue(Object item)
 //---------------------------------------------
 public Object dequeue()
 {
-	return LinkedQueue.removeFirst();
-}
-//---------------------------------------------
+	 Node bruh = front;
+	if (front != null)
+		front = front.next;
+	return bruh;
+	}
+
+
+
 //Returns true if queue is empty.
 //---------------------------------------------
 public boolean isEmpty()

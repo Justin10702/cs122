@@ -73,8 +73,15 @@ public boolean isFull()
 //---------------------------------------------
 public int size()
 {
-	return LinkedQueue.size();
+	Node bruh = front;
+	int test = 0;
+	while(bruh != null) {
+		bruh = bruh.next;
+		test++;
+	}
+	return test;
 }
+
 //---------------------------------------------
 //Returns a string containing the elements of the queue
 //from first to last

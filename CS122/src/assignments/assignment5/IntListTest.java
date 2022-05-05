@@ -63,6 +63,7 @@ System.out.println(list.toString());
 break;
 case 7:
 list.removeLast();
+break;
 case 8:
 list.replace(choice, 4);
 break;

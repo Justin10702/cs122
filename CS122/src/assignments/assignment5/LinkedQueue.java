@@ -2,7 +2,6 @@ package assignments.assignment5;
 
 import java.util.LinkedList;
 
-import assignments.assignment5.IntList.IntNode;
 import javafx.scene.Node;
 
 //***********************************************************

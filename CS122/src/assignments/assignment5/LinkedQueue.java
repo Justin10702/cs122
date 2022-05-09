@@ -21,6 +21,9 @@ LinkedList<String> LinkedQueue;
 public LinkedQueue()
 {
 	this.LinkedQueue = new LinkedList<String>();
+	front = null;
+	back = null;
+	numElements = 0;
 }
 //---------------------------------------------
 //Puts item on end of queue.
@@ -78,13 +81,7 @@ public boolean isFull()
 //---------------------------------------------
 public int size()
 {
-	Node bruh = front;
-	int test = 0;
-	while(bruh != null) {
-		bruh = bruh.next;
-		test++;
-	}
-	return test;
+	return numElements;
 }
 
 //---------------------------------------------

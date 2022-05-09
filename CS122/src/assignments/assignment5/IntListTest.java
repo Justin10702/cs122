@@ -65,7 +65,9 @@ case 7:
 list.removeLast();
 break;
 case 8:
-list.replace(choice, 4);
+int oldVal = scan.nextInt();
+int newnewVal = scan.nextInt();
+list.replace(oldVal, newnewVal);
 break;
 }
 
@@ -85,7 +87,8 @@ System.out.println("4: Print the list");
 System.out.println("5: Return the number of elements in the list");
 System.out.println("6: Return a string containing the print value of the list");
 System.out.println("7: Remove the last element of the list");
-System.out.println("8: Replace all occurances of OldVal in the list with NewVal");
+System.out.println("8: Replace all occurances of OldVal in the list with NewVal \n Please Enter The Value You Want to Replace, the number you want to replace it with.");
+
 System.out.print("\nEnter your choice: ");
 }
 }

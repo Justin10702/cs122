@@ -86,12 +86,15 @@ public void removeLast() {
 }	
 public void replace(int oldVal, int newVal) {
 	
-	while(front != null) {
-		if(front.val == oldVal) {
-			front.val = newVal;
-			front = front.next;
+	IntNode bruh = front;
+	
+	while(bruh != null) {
+		if(bruh.val == oldVal) {
+			bruh.val = newVal;
 		}
-}
+		bruh = bruh.next;
+	}
+
 }
 
 //------------------------------------------------

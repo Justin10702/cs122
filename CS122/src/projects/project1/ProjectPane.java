@@ -61,7 +61,7 @@ public class ProjectPane extends GridPane {
 		add.setOnAction(event -> {
 			String addit = textField.getText();
 			q.enqueue(addit);
-			t.setText(t.getText() + "->" + addit);
+			t.setText(q.toString());
 		});
 		
 		remove.setOnAction(event -> {
@@ -71,10 +71,9 @@ public class ProjectPane extends GridPane {
 		});
 		
 		clear.setOnAction(event -> {
-			while(!q.isEmpty()) {
-				q.dequeue();
-			}
-			t.setText(" ");
+			q.deleteList();
+			
+			t.setText(q.toString());
 		});
 
 		setAlignment(Pos.CENTER);

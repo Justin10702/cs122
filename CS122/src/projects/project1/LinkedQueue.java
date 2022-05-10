@@ -22,6 +22,11 @@ import assignments.assignment5.LinkedQueue.Node;
 		back = null;
 		numElements = 0;
 	}
+	
+	void deleteList()
+    {
+        front = null;
+    }
 	//---------------------------------------------
 	//Puts item on end of queue.
 	//---------------------------------------------

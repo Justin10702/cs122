@@ -61,7 +61,7 @@ public class ProjectPane extends GridPane {
 		add.setOnAction(event -> {
 			String addit = textField.getText();
 			q.enqueue(addit);
-			t.setText(q.toString());
+			t.setText(t.getText() + "->" + addit);
 		});
 		
 		remove.setOnAction(event -> {
